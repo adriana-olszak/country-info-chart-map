@@ -1,5 +1,5 @@
 export interface Country {
-  name: string;
-  latlng: number[];
-  population: number;
+  name: string
+  latlng: number[]
+  population: number
 }
