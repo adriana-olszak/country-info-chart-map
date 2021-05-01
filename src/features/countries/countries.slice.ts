@@ -59,6 +59,13 @@ export const countriesSlice = createSlice({
 })
 
 export const selectCountries = (state: RootState) => state.countries.data
+export const selectCountriesForChart = (state: RootState) =>
+  state.countries.data
+    .map((d) => ({
+      name: d.name,
+      ppl: d.population,
+    }))
+    .sort((a, b) => b.ppl - a.ppl)
 export const selectCountriesStatus = (state: RootState) => state.countries.status
 
 export default countriesSlice.reducer
