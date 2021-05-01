@@ -1,0 +1,12 @@
+.icon {
+    width: 30%;
+}
+.text {
+    font-size: 18px;
+    margin-top: 15px;
+    font-weight: lighter;
+}
+
+.noData {
+    margin-top: 20px;
+}

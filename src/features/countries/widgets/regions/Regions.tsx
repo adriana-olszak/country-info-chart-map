@@ -11,5 +11,9 @@ export const Regions: React.FC = () => {
     dispatch(fetchByRegion(value))
   }
 
-  return <TagCloud onClick={onClick} tags={data} />
+  return (
+    <div>
+      <TagCloud onClick={onClick} tags={data} />
+    </div>
+  )
 }

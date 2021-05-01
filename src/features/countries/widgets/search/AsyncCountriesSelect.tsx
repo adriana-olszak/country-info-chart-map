@@ -6,7 +6,6 @@ import type { ActionMeta, ValueType, InputActionMeta } from 'react-select/src/ty
 interface IProps {
   onOptionSelected: (value: string) => void
   onInputChange: (value: string) => void
-  id: string
   inputValue: string
 }
 
@@ -15,7 +14,7 @@ interface IOptionValue {
   value: string
 }
 
-export const AsyncCountriesSelect: React.FC<IProps> = ({ onInputChange, onOptionSelected, id, inputValue }) => {
+export const AsyncCountriesSelect: React.FC<IProps> = ({ onInputChange, onOptionSelected, inputValue }) => {
   const url = (name: string) => `https://restcountries.eu/rest/v2/name/${name}?fields=name`
 
   const handleInputChange = (newValue: string, { action }: InputActionMeta) => {
@@ -44,15 +43,13 @@ export const AsyncCountriesSelect: React.FC<IProps> = ({ onInputChange, onOption
         .get<{ name: string }[]>(url(value), {})
         .then((result) => transformResult(result.data))
         .then(resolve)
-        .catch((err) => {
-          console.error(err)
+        .catch(() => {
           reject()
         })
     })
 
   return (
     <AsyncSelect<IOptionValue>
-      id={id}
       isClearable
       autoFocus
       inputValue={inputValue}

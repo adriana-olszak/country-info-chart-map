@@ -1,6 +1,7 @@
 .form {
   display: flex;
   position: relative;
+  margin-bottom: 16px;
 }
 
 .label {
@@ -13,6 +14,7 @@
 .input {
   min-width: 200px;
   margin: 0 16px;
+  margin-top: 4px;
 }
 
 .button {
@@ -22,4 +24,10 @@
   font-weight: bold;
   color: white;
   background: #88d1d4;
+}
+
+@media (min-width: 764px) {
+  .form {
+    margin: 0;
+  }
 }

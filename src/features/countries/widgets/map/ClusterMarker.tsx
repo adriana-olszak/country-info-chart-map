@@ -35,7 +35,12 @@ export const ClusterMarker: React.FC<IProps> = (props) => {
   }
 
   return (
-    <Marker key={coordinates.toString()} coordinates={coordinates} style={clusterMarkerStyles} onClick={clusterClick}>
+    <Marker
+      key={coordinates.toString().concat(String(pointCount))}
+      coordinates={coordinates}
+      style={clusterMarkerStyles}
+      onClick={clusterClick}
+    >
       <div>{pointCount}</div>
     </Marker>
   )

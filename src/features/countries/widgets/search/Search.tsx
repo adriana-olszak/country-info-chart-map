@@ -20,13 +20,8 @@ export const Search = () => {
 
   return (
     <form className={styles.form} onSubmit={handleSubmit}>
-      {/* eslint-disable-next-line jsx-a11y/label-has-associated-control */}
-      <label className={styles.label} htmlFor="countries-select">
-        Search for a country
-      </label>
       <div className={styles.input}>
         <AsyncCountriesSelect
-          id="countries-select"
           onOptionSelected={onCountrySelected}
           onInputChange={setInputValue}
           inputValue={inputValue}

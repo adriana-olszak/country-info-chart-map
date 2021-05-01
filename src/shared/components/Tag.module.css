@@ -1,4 +1,5 @@
 .tag {
+    margin-top: 5px;
     padding: 8px 16px;
     text-align: center;
     background-color: #c3bae4;
@@ -18,4 +19,10 @@
 }
 .tag + .tag {
     margin-left: 8px;
+}
+
+@media (min-width: 764px) {
+    .tag {
+        margin: 0;
+    }
 }
