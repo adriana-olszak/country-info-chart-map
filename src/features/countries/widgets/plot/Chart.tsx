@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
 import { Bar, BarChart, CartesianGrid, Legend, ResponsiveContainer, Tooltip, XAxis, YAxis } from 'recharts'
-import styles from './Chart.module.css'
 import { selectCountriesForChart } from '../../countries.slice'
 
 export const PopulationChart: React.FC = () => {
@@ -25,7 +24,7 @@ export const PopulationChart: React.FC = () => {
       >
         <CartesianGrid strokeDasharray="3 3" />
         <XAxis type="number" />
-        <YAxis dataKey="name" type="category" scale="band" label="country name" />
+        <YAxis dataKey="name" type="category" scale="band" />
         <Tooltip />
         <Legend />
         <Bar dataKey="ppl" fill="#8884d8" barSize={10} />

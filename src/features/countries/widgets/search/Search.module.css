@@ -1,0 +1,25 @@
+.form {
+  display: flex;
+  position: relative;
+}
+
+.label {
+  position: absolute;
+  top: -20px;
+  left: 17px;
+  color: #696868;
+}
+
+.input {
+  min-width: 200px;
+  margin: 0 16px;
+}
+
+.button {
+  border: none;
+  padding: 6px 16px;
+  border-radius: 16px;
+  font-weight: bold;
+  color: white;
+  background: #88d1d4;
+}

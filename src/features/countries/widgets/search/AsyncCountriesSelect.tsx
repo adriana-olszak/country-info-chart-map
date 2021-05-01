@@ -43,6 +43,7 @@ export const AsyncCountriesSelect: React.FC<IProps> = ({ onInputChange, onOption
       loadOptions={loadOptions}
       defaultOptions
       onInputChange={handleInputChange}
+      placeholder="Country name"
     />
   )
 }

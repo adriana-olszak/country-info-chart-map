@@ -1,13 +1,14 @@
 .tag {
-    padding: 5px 8px;
+    padding: 8px 16px;
     text-align: center;
-    background-color: #599bb3;
+    background-color: #c3bae4;
     border: none;
-    border-radius: 8px;
+    border-radius: 16px;
     cursor: pointer;
     color: #ffffff;
     font-weight: bold;
 }
+
 .tag:hover {
     background-color:#408c99;
 }
@@ -15,4 +16,6 @@
     position:relative;
     top:1px;
 }
-
+.tag + .tag {
+    margin-left: 8px;
+}
