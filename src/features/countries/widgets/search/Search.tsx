@@ -8,8 +8,9 @@ export const Search = () => {
   const dispatch = useAppDispatch()
   const [inputValue, setInputValue] = useState('')
 
-  const onCountrySelected = () => {
-    dispatch(fetchByPartialName(inputValue))
+  const onCountrySelected = (newValue: string) => {
+    setInputValue(newValue)
+    dispatch(fetchByPartialName(newValue))
   }
 
   const handleSubmit = (event: React.MouseEvent<HTMLFormElement>) => {
@@ -28,6 +29,7 @@ export const Search = () => {
           id="countries-select"
           onOptionSelected={onCountrySelected}
           onInputChange={setInputValue}
+          inputValue={inputValue}
         />
       </div>
       <button className={styles.button} type="submit">
