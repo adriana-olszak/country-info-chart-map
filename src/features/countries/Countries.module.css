@@ -12,11 +12,13 @@
 }
 
 .mapPanel {
-
+    flex-grow: 1;
+    height: 100vh;
 }
 .chartPanel {
-
+    flex-grow: 1;
+    max-width: 40%;
 }
 .dataPresentation {
-
+    display: flex;
 }

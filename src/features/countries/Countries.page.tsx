@@ -3,6 +3,7 @@ import { Regions } from './widgets/regions/Regions'
 import styles from './Countries.module.css'
 import { Search } from './widgets/search/Search'
 import { PopulationChart } from './widgets/plot/Chart'
+import { Map } from './widgets/map/Map'
 
 export const CountriesPage: React.FC = () => (
   <div className={styles.page}>
@@ -15,7 +16,9 @@ export const CountriesPage: React.FC = () => (
       <div className={styles.chartPanel}>
         <PopulationChart />
       </div>
-      <div className={styles.mapPanel}> Show me some maps</div>
+      <div className={styles.mapPanel}>
+        <Map />
+      </div>
     </div>
   </div>
 )
